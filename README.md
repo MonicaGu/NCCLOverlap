@@ -3,6 +3,7 @@
 ## Compile
 
 ```bash
+cd test
 export LIBRARY_PATH=/path/to/nccl:$LIBRARY_PATH
 export PATH=/path/to/cuda/nvvm/bin:$PATH
 make
@@ -14,7 +15,7 @@ make
 export LD_LIBRARY_PATH=/path/to/libnccl.so.2:$LD_LIBRARY_PATH
 ```
 
-Then, Run the following two commands on the same server with at least 2 GPUs at the same time:
+Then, Run the following two commands on the same server with at least 2 GPUs at the same time [in `test`]:
 
 ```bash
 ./cudnn_conv 0 127.0.0.1 <port>
